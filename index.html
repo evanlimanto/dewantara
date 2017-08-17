@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project Dewantara</title>
+    <link rel="shortcut icon" type="image/png" href="./img/favicon.ico"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+  </head>
+  <body>
+    <nav class="navbar-fixed is-transparent">
+      <div class="nav-end">
+        <a id="nav-0" class="nav-item active"><label class="active">Home</label></a>
+        <a id="nav-1" class="nav-item"><label>Why Dewantara?</label></a>
+        <a id="nav-2" class="nav-item"><label>About Us</label></a>
+        <a id="nav-3" class="nav-item nav-apply-item"><label>Apply</label></a>
+      </div>
+    </nav>
+    <section class="section" id="section-0">
+      <hr />
+      <div class="background-overlay-one"></div>
+      <div class="background-one"></div>
+      <div class="container">
+        <h1 class="title white-text">
+          Project <br/> Dewantara
+        </h1>
+        <div class="columns">
+          <div class="column is-offset-1">
+            <p class="subtitle white-text">
+              We are a <strong>not-for-profit</strong> project whose goal is to help <strong>unlock</strong> the future potential of Indonesian high school students. To accomplish this, we aim to provide students with <strong>free</strong> and <strong>personalized</strong> mentorship regarding a post-secondary pathway in the USA.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="section-1">
+      <hr />
+      <div class="background-overlay-two"></div>
+      <div class="background-two"></div>
+      <div class="container">
+        <h1 class="title white-text">
+          Why <br/> Dewantara?
+        </h1>
+        <div class="columns">
+          <div class="column is-offset-1">
+            <p class="subtitle white-text">
+              Getting into college is <strong>difficult</strong>. 
+              <br/><br/>
+              Preparing to apply to college and the actual process of applying itself are the two main challenges that every student has to grapple with.
+              <br/><br/>
+              As former high school students ourselves, we have experienced the pain of spending countless hours researching for answers, only to still be <strong>underprepared</strong> and <strong>misinformed</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="section-2">
+      <hr />
+      <div class="background-overlay-three"></div>
+      <div class="background-three"></div>
+      <div class="container">
+        <h1 class="title white-text">
+          About Us
+        </h1>
+        <div class="columns">
+          <div class="column is-offset-1">
+            <p class="subtitle white-text">
+              We are a team of Indonesian college students who have successfully gone through the USA college application process.
+              <br/><br/>
+              We come from a variety of backgrounds, and are attending/have attended colleges all over the United States, like Berkeley, Cornell, UCLA and Yale. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="section-3">
+      <hr />
+      <div class="background-overlay-four"></div>
+      <div class="background-four"></div>
+      <div class="container">
+        <h1 class="title white-text">
+          Apply
+        </h1>
+        <div class="columns">
+          <div class="column is-offset-1">
+            <p class="subtitle white-text">
+              Applications are now open for the 2017 batch. <a href="https://goo.gl/forms/ZI7lpRsGWUD7P0mt1" target="_blank" class="apply-link">Click to apply</a>!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script>
+      var scrollItems = $("section");
+      $(window).scroll(function() {
+        var scrollPosition = $(this).scrollTop() + 15;
+        var passedSections = scrollItems.map(function(){
+          if ($(this).offset().top < scrollPosition)
+            return this;
+        });
+        // Get last item
+        var sectionIndex = passedSections.length - 1;
+        $("a.nav-item").removeClass("active");
+        $("a.nav-item > label").removeClass("active");
+        $("a#nav-" + sectionIndex).addClass("active");
+        $("a#nav-" + sectionIndex + " > label").addClass("active");
+      });
+
+      $("a.nav-item").click(function() {
+        var index = $("a.nav-item").index(this);
+        var offsetTop = $("section#section-" + index).offset().top;
+        $('html, body').stop().animate({ 
+          scrollTop: offsetTop
+        }, 500);
+      })
+    </script>
+  </body>
+</html>
