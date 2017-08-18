@@ -1,0 +1,150 @@
+// 1. Import the initial variables
+@font-face
+    font-family: "Maven Pro"
+    src: url(fonts/MavenPro-Regular.ttf) format('truetype')
+
+
+@font-face
+    font-family: Dosis
+    src: url(fonts/Dosis-Regular.otf) format('opentype')
+
+@import "node_modules/bulma/sass/utilities/initial-variables"
+
+// 2. Set your own initial variables
+// Update blue
+$blue: #72d0eb
+// Add pink and its invert
+$pink: #ffb3b3
+$pink-invert: #fff
+// Add a serif family
+$family-serif: "Dosis", sans-serif
+
+// 3. Set the derived variables
+// Use the new pink as the primary color
+$primary: $pink
+$primary-invert: $pink-invert
+// Use the existing orange as the danger color
+$danger: $orange
+// Use the new serif family
+$family-primary: $family-serif
+
+// 4. Import the rest of Bulma
+@import "node_modules/bulma/bulma"
+
+
+.white-text
+    color: #fff
+
+
+h1.title
+    font-family: "Maven Pro", sans-serif
+    font-size: 84px
+    font-weight: 500
+
+.subtitle
+    font-size: 24px
+p
+    max-width: 40vw
+    opacity: 1
+    font-family: Dosis, sans-serif
+    font-weight: lighter
+
+@media (max-width:480px)
+    h1.title
+        font-size: 64px
+
+    p.white-text
+        font-size: 24px
+
+    a.nav-item
+        font-size: 14px
+
+nav.navbar-fixed
+    z-index: 2
+    background-color: transparent
+    position: fixed
+    top: 0
+    right: 0
+
+
+a.nav-item
+    color: #ddd
+    opacity: .8
+    display: inline-block
+    padding: 15px
+
+
+a label,
+a.nav-item:hover
+    cursor: pointer
+    color: #fff
+    opacity: 1
+
+
+a.nav-apply-item
+    font-weight: 800
+
+
+a.nav-item.active
+    opacity: 1!important
+
+
+a.nav-item>label.active
+    border-bottom: 1px solid #fff
+    padding-bottom: 0
+
+
+a.nav-item>label
+    -webkit-transition: .5s all ease-out
+    -moz-transition: .5s all ease-out
+    transition: .5s all ease-out
+    border-bottom: 0
+
+
+#section
+    height: 100vh
+
+hr
+    opacity: 0
+
+
+a.apply-link
+    opacity: .8
+
+
+a.apply-link:hover
+    text-decoration: underline
+    color: #00d1b2
+    opacity: 1
+
+#section-0
+    @extend #section
+    strong
+        color: #fff
+        font-weight: 900
+    background: url(img/graduation.jpg) #111
+    background-size: cover
+
+#section-2
+    @extend #section
+    background: url(img/college-classroom.jpg) #111
+    background-size: cover
+
+#section-3
+    @extend #section
+    background: url(img/graduation.jpg) #111
+    background-size: cover
+
+#section-4
+    @extend #section
+    background: url(img/graduation.jpg) #111
+    background-size: cover
+
+#section-1
+    @extend #section
+    strong
+        color: #333
+        font-weight: 900
+    background:  url(img/library.jpg) #F1F5F2
+    background-size: cover
+    background-repeat: no-repeat
