@@ -101,7 +101,7 @@ a.nav-item>label
     border-bottom: 0
 
 
-section.section
+#section
     height: 100vh
 
 hr
@@ -118,6 +118,7 @@ a.apply-link:hover
     opacity: 1
 
 #section-0
+    @extend #section
     strong
         color: #fff
         font-weight: 900
@@ -125,28 +126,25 @@ a.apply-link:hover
     background-size: cover
 
 #section-2
-    background: url(img/graduation.jpg) #111
+    @extend #section
+    background: url(img/college-classroom.jpg) #111
     background-size: cover
 
 #section-3
+    @extend #section
     background: url(img/graduation.jpg) #111
     background-size: cover
 
 #section-4
+    @extend #section
     background: url(img/graduation.jpg) #111
     background-size: cover
 
 #section-1
+    @extend #section
     strong
         color: #333
         font-weight: 900
     background:  url(img/library.jpg) #F1F5F2
-    -webkit-filter: grayscale(100%)
-    filter: grayscale(100%)
-
     background-size: cover
     background-repeat: no-repeat
-
-
-html
-    background: black
