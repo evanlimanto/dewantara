@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/evanlimanto/dewantara#readme",
   "dependencies": {
+    "compression": "^1.7.0",
     "express": "^4.15.4"
   }
 }
