@@ -32,27 +32,6 @@ $family-primary: $family-serif
 @import "node_modules/bulma/bulma"
 
 
-
-.background,
-.background-overlay
-    width: 100%
-    height: 100%
-    left: 0
-    position: fixed
-    top: 0
-
-
-.background
-    background: url(img/graduation.jpg) no-repeat fixed #111
-    background-size: cover
-    opacity: .5
-
-
-.background-overlay
-    background-color: #000
-    opacity: 1
-
-
 .white-text
     color: #fff
 
@@ -62,17 +41,13 @@ h1.title
     font-size: 84px
     font-weight: 500
 
-
-p.white-text
+.subtitle
+    font-size: 24px
+p
+    max-width: 40vw
+    opacity: 1
     font-family: Dosis, sans-serif
-    font-size: 28px
     font-weight: lighter
-
-
-strong
-    color: #fff!important
-    font-weight: 900
-
 
 @media (max-width:480px)
     h1.title
@@ -141,3 +116,37 @@ a.apply-link:hover
     text-decoration: underline
     color: #00d1b2
     opacity: 1
+
+#section-0
+    strong
+        color: #fff
+        font-weight: 900
+    background: url(img/graduation.jpg) #111
+    background-size: cover
+
+#section-2
+    background: url(img/graduation.jpg) #111
+    background-size: cover
+
+#section-3
+    background: url(img/graduation.jpg) #111
+    background-size: cover
+
+#section-4
+    background: url(img/graduation.jpg) #111
+    background-size: cover
+
+#section-1
+    strong
+        color: #333
+        font-weight: 900
+    background:  url(img/library.jpg) #F1F5F2
+    -webkit-filter: grayscale(100%)
+    filter: grayscale(100%)
+
+    background-size: cover
+    background-repeat: no-repeat
+
+
+html
+    background: black
