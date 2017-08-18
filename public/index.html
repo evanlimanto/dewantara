@@ -25,6 +25,7 @@
         <a id="nav-2" class="nav-item"><label>About Us</label></a>
         <a id="nav-3" class="nav-item nav-apply-item"><label>Apply</label></a>
         <a id="nav-4" class="nav-item"><label>Team</label></a>
+        <a id="nav-5" class="nav-item"><label>Contact</label></a>
       </div>
     </nav>
     <section class="section" id="section-0">
@@ -36,7 +37,7 @@
         <div class="columns">
           <div class="column is-offset-1">
             <p class="subtitle white-text">
-              We are a <strong>not-for-profit</strong> project whose goal is to help <strong>unlock</strong> the future potential of Indonesian high school students. To accomplish this, we aim to provide students with <strong>free</strong> and <strong>personalized</strong> mentorship regarding a post-secondary pathway in the USA.
+              We are a <strong class="emphasis">not-for-profit</strong> project whose goal is to help <strong class="emphasis">unlock</strong> the future potential of Indonesian high school students. To accomplish this, we aim to provide students with <strong class="emphasis">free</strong> and <strong class="emphasis">personalized</strong> mentorship regarding a post-secondary pathway in the USA.
             </p>
           </div>
         </div>
@@ -55,7 +56,7 @@
               <br/><br/>
               Preparing to apply to college and the actual process of applying itself are the two main challenges that every student has to grapple with.
               <br/><br/>
-              As former high school students ourselves, we have experienced the pain of spending countless hours researching for answers, only to still be <strong>underprepared</strong> and <strong>misinformed</strong>.
+              As former high school students ourselves, we have experienced the pain of spending countless hours researching for answers, only to still be <strong class="emphasis">underprepared</strong> and <strong class="emphasis">misinformed</strong>.
             </p>
           </div>
         </div>
@@ -99,10 +100,98 @@
         <h1 class="title white-text">
         Team
         </h1>
+        <div class="columns is-centered">
+          <div class="column is-2">
+            <figure class="image" id="bryan-image">
+              <img src="img/team/bryan.jpeg">
+            </figure>
+          </div>
+          <div class="column is-2">
+            <figure class="image" id="evan-image">
+              <img src="img/team/evan.jpeg">
+            </figure>
+          </div>
+          <div class="column is-2">
+            <figure class="image" id="gaby-image">
+              <img src="img/team/gaby.jpeg">
+            </figure>
+          </div>
+          <div class="column is-2">
+            <figure class="image" id="reinaldo-image">
+              <img src="img/team/reinaldo.jpeg">
+            </figure>
+          </div>
+          <div class="column is-2">
+            <figure class="image" id="theo-image">
+              <img src="img/team/theo.jpeg">
+            </figure>
+          </div>
+        </div>
+        <hr />
+        <div class="columns is-centered">
+          <div class="column is-10">
+            <div class="box description-box">
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <div class="description" id="bryan-desc">
+                      <strong>Bryan Silfanus</strong>
+                      <ul>
+                        <li>High School: Sekolah Pelita Harapan</li>
+                        <li>College: UC Berkeley</li>
+                        <li>Degree(s): Business Administration and Public Policy, Class of 2018</li>
+                      </ul>
+                    </div>
+                    <div class="description" id="evan-desc">
+                      <strong>Evan Limanto</strong>
+                      <ul>
+                        <li>High School: Bina Bangsa School</li>
+                        <li>College: UC Berkeley</li>
+                        <li>Degree(s): Electrical Engineering and Computer Science, Class of 2017</li>
+                      </ul>
+                    </div>
+                    <div class="description" id="gaby-desc">
+                      <strong>Gaby Wantah</strong>
+                      <ul>
+                        <li>High School: Diamond Bar High School (U.S.)</li>
+                        <li>College: UC Berkeley</li>
+                        <li>Degree(s): Economics and Sociology, Class of 2017</li>
+                      </ul>
+                    </div>
+                    <div class="description" id="reinaldo-desc">
+                      <strong>Reinaldo Tendean</strong>
+                      <ul>
+                        <li>High School: National High Jakarta School</li>
+                        <li>College: UC Berkeley</li>
+                        <li>Degree(s): Materials Science and Engineering, Class of 2018</li>
+                      </ul>
+                    </div>
+                    <div class="description" id="theo-desc">
+                      <strong>Theodorus Budiyanto</strong>
+                      <ul>
+                        <li>High School: SMAK Louis 1 Surabaya</li>
+                        <li>College: UC Berkeley</li>
+                        <li>Degree(s): Electrical Engineering and Computer Science, Class of 2016</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="section-4">
+      <hr />
+      <div class="container">
+        <h1 class="title white-text">
+          Contact
+        </h1>
         <div class="columns">
           <div class="column is-offset-1">
             <p class="subtitle white-text">
-
+              Questions? Email us at <a class="email">team@dewantara.org</a>
             </p>
           </div>
         </div>
@@ -148,7 +237,20 @@
         $('html, body').stop().animate({
           scrollTop: offsetTop
         }, 500);
-      })
+      });
+
+      $(".image").hover(
+        function() {
+          var name = $(this).attr("id").split("-")[0];
+          $("#" + name + "-desc").css({ display: "block" });
+          $(".description-box").css({opacity: 1});
+        },
+        function() {
+          var name = $(this).attr("id").split("-")[0];
+          $("#" + name + "-desc").css({ display: "none" });
+          $(".description-box").css({opacity: 0});
+        }
+      );
 
       // Register service worker
       if ('serviceWorker' in navigator && document.location.root === "www.dewantara.org") {
