@@ -111,14 +111,14 @@ hr {
     opacity: 0
 }
 
-a.apply-link {
-    opacity: .8
+a.apply-link, a.email-link {
+    opacity: .8;
 }
 
-a.apply-link:hover {
+a.apply-link:hover, a.email:hover {
     text-decoration: underline;
     color: #00d1b2;
-    opacity: 1
+    opacity: 1.0;
 }
 
 figure.image {
