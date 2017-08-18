@@ -44,7 +44,7 @@ p.white-text {
     font-weight: lighter
 }
 
-strong {
+strong.emphasis {
     color: #fff!important;
     font-weight: 900
 }
@@ -119,4 +119,29 @@ a.apply-link:hover {
     text-decoration: underline;
     color: #00d1b2;
     opacity: 1
+}
+
+figure.image {
+  width: 144px;
+  height: 144px;
+}
+
+figure.image img {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+figure.image:hover img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+div.description {
+  display: none;
+}
+
+div.description-box {
+  opacity: 0;
 }
