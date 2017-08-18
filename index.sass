@@ -21,10 +21,7 @@ $family-serif: "Dosis", sans-serif
 
 // 3. Set the derived variables
 // Use the new pink as the primary color
-$primary: $pink
-$primary-invert: $pink-invert
 // Use the existing orange as the danger color
-$danger: $orange
 // Use the new serif family
 $family-primary: $family-serif
 
@@ -132,12 +129,12 @@ a.apply-link:hover
 
 #section-3
     @extend #section
-    background: url(img/graduation.jpg) #111
+
+    background: url(img/book2.jpg) #111
     background-size: cover
 
 #section-4
-    @extend #section
-    background: url(img/graduation.jpg) #111
+    background: #333
     background-size: cover
 
 #section-1
@@ -148,3 +145,19 @@ a.apply-link:hover
     background:  url(img/library.jpg) #F1F5F2
     background-size: cover
     background-repeat: no-repeat
+
+html
+    background-color: #333
+
+.footer
+    background-color: #333
+    padding-bottom: 24px
+
+.image
+    -webkit-filter: grayscale(100%)
+    filter: grayscale(100%)
+
+img
+    border-radius: 50%
+    -moz-border-radius: 50%
+    -webkit-border-radius: 50%
