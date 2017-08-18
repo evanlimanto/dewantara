@@ -145,3 +145,10 @@ div.description {
 div.description-box {
   opacity: 0;
 }
+
+@media (max-width: 799px) {
+    figure.image {
+      width: 80px;
+      height: 80px;
+    }
+}
